@@ -17,7 +17,6 @@ h2 {
     margin: 0;
     font-family: 'Oswald', sans-serif;
     color: #1e392a;
-    font-size: 4em;
 }
 
 h3 {
@@ -83,7 +82,7 @@ nav *, .nav * {
 }
 
 nav h1, .nav h1 {
-    font-size: 4em;
+    font-size: 2.2em;
 }
 
 a h1, a button {
