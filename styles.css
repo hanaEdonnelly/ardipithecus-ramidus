@@ -35,6 +35,10 @@ li {
     text-align: left;   
 }
 
+a {
+    color: #1e392a;
+}
+
 .center {
     text-align: center;
     margin: 0 auto;
@@ -44,6 +48,7 @@ li {
 .caption {
     text-align: center;
     margin-top: .2em;
+    padding: 0 .5em;
 }
 
 button, .btn {
