@@ -75,6 +75,10 @@ nav h1, .nav h1 {
     font-size: 4em;
 }
 
+a button {
+    text-decoration: none;
+}
+
 button {
     font-size: 4em;
     font-family: 'Source Sans Pro', sans-serif;
