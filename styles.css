@@ -202,6 +202,16 @@ right connector from last child*/
 	-moz-transition: all 0.5s;
 }
 
+table {
+    width: 150vw;
+    overflow-x: auto;
+}
+
+.span-2 {
+    column-span: 2;
+}
+
 footer p {
     text-align: center;
 }
+
