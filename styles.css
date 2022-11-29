@@ -40,9 +40,15 @@ a {
 }
 
 .center {
-    text-align: center;
+    /*text-align: center;
     margin: 0 auto;
-    width: 100%;
+    width: 100%;*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.center > * {
+    gap: .2em;
 }
 
 .caption {
@@ -52,10 +58,7 @@ a {
 }
 
 button, .btn {
-    font-weight: bold;
-    font-size: 5em;
     text-align: center;
-    width: 60%;
     margin: auto;
     margin-bottom: .1em;
 }
@@ -107,30 +110,27 @@ a h1, a button {
 }
 
 button {
-    font-size: 4em;
-    font-family: 'Source Sans Pro', sans-serif;
-    text-transform: uppercase;
-    background-color: #D1F0B1;
-    color: #56494E;
-    padding: .25em;
+    font-size: 2.5em;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+    background-color: #1e392a;
+    color: #fff;
+    padding: .2em .6em;
     border: none;
-    border-radius: .1em;
+    border-radius: .25em;
 }
 
 .tree ul {
-	padding-top: 20px; position: relative;
-	
-	transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+	padding-top: 20px;
+    position: relative;
 }
 
 .tree li {
 	float: left; text-align: center;
 	list-style-type: none;
 	position: relative;
-	padding: 20px 5px 0 5px;
-	
+	/*padding: 20px 5px 0 5px;*/
+    padding: 0 5px;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -138,15 +138,16 @@ button {
 
 /*We will use ::before and ::after to draw the connectors*/
 
-.tree li::before, .tree li::after{
+.tree li::before, .tree li::after {
 	content: '';
 	position: absolute; top: 0; right: 50%;
-	border-top: 1px solid #ccc;
-	width: 50%; height: 20px;
+	border-top: 1px solid #000;
+	width: 50%; 
+    height: 10px;
 }
 .tree li::after{
 	right: auto; left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #000;
 }
 
 /*We need to remove left-right connectors from elements without 
@@ -165,7 +166,7 @@ right connector from last child*/
 }
 /*Adding back the vertical connector to the last nodes*/
 .tree li:last-child::before{
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #000;
 	border-radius: 0 5px 0 0;
 	-webkit-border-radius: 0 5px 0 0;
 	-moz-border-radius: 0 5px 0 0;
@@ -180,12 +181,12 @@ right connector from last child*/
 .tree ul ul::before{
 	content: '';
 	position: absolute; top: 0; left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 1px solid #000;
 	width: 0; height: 20px;
 }
 
 .tree li a{
-	border: 1px solid #ccc;
+	border: 1px solid #000;
 	padding: 5px 10px;
 	text-decoration: none;
 	color: #666;
