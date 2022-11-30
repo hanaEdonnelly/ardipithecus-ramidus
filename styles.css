@@ -62,9 +62,9 @@ a h1 {
 }
 
 .caption {
-    margin-top: .1em;
+    margin-top: 0;
     text-align: center;
-    padding: .5em;
+    padding: 0 .5em;
 }
 
 button, .btn {
