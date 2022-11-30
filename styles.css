@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Playfair+Display:ital,wght@1,700&family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Oswald&display=swap');
 
+html {
+    padding: 0;
+    margin: 0;
+}
 
 body {
     width: 100%;
@@ -39,6 +43,11 @@ a {
     color: #1e392a;
 }
 
+a h1 {
+    color: #fff;
+    text-decoration: none;
+}
+
 .center {
     /*text-align: center;
     margin: 0 auto;
@@ -53,8 +62,8 @@ a {
 
 .caption {
     text-align: center;
-    margin-top: .2em;
-    padding: 0 .5em;
+    margin-top: .05em;
+    padding: .5em;
 }
 
 button, .btn {
@@ -141,13 +150,13 @@ button {
 .tree li::before, .tree li::after {
 	content: '';
 	position: absolute; top: 0; right: 50%;
-	border-top: 1px solid #000;
+	border-top: 1px solid #1e392a;
 	width: 50%; 
     height: 10px;
 }
 .tree li::after{
 	right: auto; left: 50%;
-	border-left: 1px solid #000;
+	border-left: 1px solid #1e392a;
 }
 
 /*We need to remove left-right connectors from elements without 
@@ -166,7 +175,7 @@ right connector from last child*/
 }
 /*Adding back the vertical connector to the last nodes*/
 .tree li:last-child::before{
-	border-right: 1px solid #000;
+	border-right: 1px solid #1e392a;
 	border-radius: 0 5px 0 0;
 	-webkit-border-radius: 0 5px 0 0;
 	-moz-border-radius: 0 5px 0 0;
@@ -181,15 +190,15 @@ right connector from last child*/
 .tree ul ul::before{
 	content: '';
 	position: absolute; top: 0; left: 50%;
-	border-left: 1px solid #000;
+	border-left: 1px solid #1e392a;
 	width: 0; height: 20px;
 }
 
 .tree li a{
-	border: 1px solid #000;
+	border: 1px solid #1e392a;
 	padding: 5px 10px;
 	text-decoration: none;
-	color: #666;
+	color: #1e392a;
 	font-family: arial, verdana, tahoma;
 	font-size: 11px;
 	display: inline-block;
@@ -212,7 +221,50 @@ table {
     column-span: 2;
 }
 
-footer p {
+.buttons {
+    display: flex; 
+    flex-direction: column;
+}
+
+.buttons > * {
+    width: 80%;
+    margin: auto;
     text-align: center;
 }
 
+footer {
+    background-color: #1e392a;
+    margin: 0;
+    padding: 1em;
+}
+
+footer p {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Media queries*/
+/*PC*/
+
+@media only screen and (min-width: 1024px) {
+    .panel {
+        width: 80%;
+    }
+    
+    .sketchfab-embed-wrapper {
+        width: 60%;
+        margin: 25px auto 0;
+        text-align: center;
+    }
+
+    img {
+        max-height: 550px;
+        object-fit: contain;
+    }
+
+    .caption {
+        margin-top: 0;
+    }
+}
